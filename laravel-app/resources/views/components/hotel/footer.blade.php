@@ -75,6 +75,12 @@
                 <a href="{{ config('ihunde.contact.phone_href') }}">{{ config('ihunde.contact.phone') }}</a>
             </div>
             <div>
+                <x-hotel.icon name="wa" />
+                <a href="{{ config('ihunde.contact.whatsapp_href') }}" target="_blank" rel="noopener noreferrer">
+                    WhatsApp {{ config('ihunde.contact.whatsapp_phone') }}
+                </a>
+            </div>
+            <div>
                 <x-hotel.icon name="mail" />
                 <a href="mailto:{{ config('ihunde.contact.email') }}">{{ config('ihunde.contact.email') }}</a>
             </div>

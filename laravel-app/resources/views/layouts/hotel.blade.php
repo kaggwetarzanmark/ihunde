@@ -18,5 +18,6 @@
     @yield('content')
     <x-hotel.footer />
     <x-hotel.cookie-notice />
+    <x-hotel.whatsapp-button />
 </body>
 </html>

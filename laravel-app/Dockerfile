@@ -10,6 +10,8 @@ RUN npm run build
 
 FROM php:8.4-apache-bookworm
 
+RUN php -r 'if (version_compare(PHP_VERSION, "8.4.1", "<")) { fwrite(STDERR, "PHP 8.4.1 or later is required by composer.lock; found " . PHP_VERSION . PHP_EOL); exit(1); }'
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         libcurl4-openssl-dev \

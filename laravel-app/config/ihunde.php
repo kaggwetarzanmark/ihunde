@@ -6,10 +6,11 @@ $fullBoardRate = 'UGX 300,000';
 
 return [
     'contact' => [
-        'phone' => '+256 772 060250',
-        'phone_href' => 'tel:+256772060250',
-        'whatsapp_href' => 'https://wa.me/256772060250',
-        'email' => 'stay@ihundefarmlodge.example',
+        'phone' => '+256 790 000 040',
+        'phone_href' => 'tel:+256790000040',
+        'whatsapp_phone' => '+256 790 000 030',
+        'whatsapp_href' => 'https://wa.me/256790000030',
+        'email' => 'Ihundefarlodge@gmail.com',
         'location' => 'Nyakasharara, Kiruhura, Uganda',
         'reception' => 'Reception 24 hours',
         'restaurant_hours' => 'Restaurant 6:30 AM to 11:00 PM',
@@ -18,7 +19,7 @@ return [
     'socials' => [
         ['label' => 'Facebook', 'icon' => 'fb', 'href' => '#'],
         ['label' => 'Instagram', 'icon' => 'ig', 'href' => '#'],
-        ['label' => 'WhatsApp', 'icon' => 'wa', 'href' => 'https://wa.me/256772060250'],
+        ['label' => 'WhatsApp', 'icon' => 'wa', 'href' => 'https://wa.me/256790000030'],
     ],
 
     'navigation' => [

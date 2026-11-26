@@ -34,6 +34,54 @@ class HotelPagesTest extends TestCase
             ->assertDontSee('UGX 450,000');
     }
 
+    public function test_site_shows_the_current_lodge_contact_details(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('+256 790 000 040')
+            ->assertSee('tel:+256790000040')
+            ->assertSee('WhatsApp +256 790 000 030')
+            ->assertSee('https://wa.me/256790000030')
+            ->assertSee('Ihundefarlodge@gmail.com')
+            ->assertSee('mailto:Ihundefarlodge@gmail.com');
+    }
+
+    public function test_floating_whatsapp_button_uses_the_lodge_contact_on_all_pages(): void
+    {
+        $paths = [
+            '/',
+            '/design-system',
+            '/cookies',
+            '/accommodation',
+            '/single-room',
+            '/double-room',
+            '/rates-and-availability',
+            '/dining',
+            '/restaurant',
+            '/bar-and-lounge',
+            '/room-service',
+            '/menus',
+            '/events',
+            '/weddings',
+            '/conferences-and-retreats',
+            '/party-gardens',
+            '/camp-fire-evenings',
+            '/wellness',
+            '/offers',
+            '/about',
+            '/contact',
+            '/gallery',
+        ];
+
+        foreach ($paths as $path) {
+            $this->get($path)
+                ->assertOk()
+                ->assertSee('class="whatsapp-float"', false)
+                ->assertSee('https://wa.me/256790000030')
+                ->assertSee('aria-label="Chat with Ihunde Farm Lodge on WhatsApp"', false);
+        }
+    }
+
     public function test_accommodation_pages_show_confirmed_rates_and_public_listing_details(): void
     {
         $this->get('/accommodation')

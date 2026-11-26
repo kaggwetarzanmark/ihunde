@@ -112,7 +112,6 @@ has been dismissed. The site currently has no analytics or advertising cookies.
 The supplied HTML labels its reviews as samples. The following source values
 also need confirmation before the site is used publicly:
 
-- Email address `stay@ihundefarmlodge.example`.
 - Half-board and full-board menu inclusions.
 - Guest names and testimonials.
 - Opening hours, facility descriptions and social profile URLs.
