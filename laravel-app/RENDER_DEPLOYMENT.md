@@ -2,6 +2,8 @@
 
 This project can be built remotely by Render from the Dockerfile; Docker does not need to be installed on your computer. The service is configured to serve Laravel's `public` directory, build Vite assets, and run without a database for the current review site.
 
+The Docker image uses PHP 8.4 because the committed Composer lock file includes Symfony 8.1 packages that require PHP 8.4.1 or later. The project's `composer.json` allows PHP 8.4.
+
 ## Before deploying
 
 - Push the project to the GitHub branch you want Render to deploy.
