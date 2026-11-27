@@ -15,27 +15,11 @@ Route::view('/double-room', 'pages.accommodation-room', [
 ])->name('pages.double-room');
 Route::view('/rates-and-availability', 'pages.rates-and-availability')
     ->name('pages.rates-and-availability');
+Route::view('/booking', 'pages.booking')->name('booking');
 
-$emptyPageSlugs = [
-    'dining',
-    'restaurant',
-    'bar-and-lounge',
-    'room-service',
-    'menus',
-    'events',
-    'weddings',
-    'conferences-and-retreats',
-    'party-gardens',
-    'camp-fire-evenings',
-    'wellness',
-    'offers',
-    'about',
-    'contact',
-    'gallery',
-];
-
-foreach ($emptyPageSlugs as $slug) {
-    Route::view("/{$slug}", 'pages.empty')->name("pages.{$slug}");
+foreach (config('ihunde_pages') as $slug => $page) {
+    Route::view("/{$slug}", 'pages.content', ['page' => $page])
+        ->name("pages.{$slug}");
 }
 
 Route::post('/booking/availability', [FormStatusController::class, 'availability'])

@@ -2,32 +2,10 @@
     <div class="nl">
         <div class="wrap">
             <div>
-                <h3>Stay in the loop</h3>
-                <p>Seasonal offers, event dates and news from the lodge.</p>
+                <h3>Need current details?</h3>
+                <p>Ask about room availability, meal plans, restaurant service or event arrangements.</p>
             </div>
-            <form action="{{ route('newsletter.subscribe') }}" method="POST">
-                @csrf
-                <label class="sr" for="em">Email address</label>
-                <input
-                    id="em"
-                    name="email"
-                    type="email"
-                    value="{{ old('email') }}"
-                    placeholder="Your email address"
-                    autocomplete="email"
-                    required
-                    @error('email', 'newsletter') aria-invalid="true" @enderror
-                >
-                <button class="btn" type="submit">Subscribe</button>
-                <div class="form-feedback" aria-live="polite">
-                    @if (session('newsletter_status'))
-                        <p class="form-status" role="status">{{ session('newsletter_status') }}</p>
-                    @endif
-                    @error('email', 'newsletter')
-                        <p class="form-error" role="alert">{{ $message }}</p>
-                    @enderror
-                </div>
-            </form>
+            <a class="btn" href="{{ config('ihunde.contact.whatsapp_href') }}" target="_blank" rel="noopener noreferrer">Message the lodge</a>
         </div>
     </div>
     <div class="wrap fg">
@@ -39,7 +17,7 @@
                     <small>Farm Lodge</small>
                 </span>
             </a>
-            <p>A quiet farm lodge in Kiruhura with private cottages, a spa, restaurant and gardens. Comfort that goes beyond.</p>
+            <p>Lodge accommodation and event enquiries in Nyakasharara, Kiruhura, Uganda.</p>
             <div class="soc" aria-label="Social media">
                 @foreach (config('ihunde.socials') as $social)
                     <a href="{{ $social['href'] }}" aria-label="{{ $social['label'] }}">

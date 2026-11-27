@@ -8,9 +8,9 @@
             <div class="wrap">
                 <p class="stay-eyebrow">Accommodation · {{ config('ihunde.accommodation.location') }}</p>
                 <h1>Room rates and meal plans</h1>
-                <p class="stay-lead">Straightforward nightly pricing for single and double rooms, with half-board and full-board options.</p>
+                <p class="stay-lead">Rates are per guest per night for single or double rooms, with half-board and full-board options.</p>
                 <div class="stay-actions">
-                    <a class="btn" href="{{ config('ihunde.contact.whatsapp_href') }}" target="_blank" rel="noopener noreferrer">Check dates on WhatsApp</a>
+                    <a class="btn" href="{{ route('booking') }}">Plan your stay</a>
                     <a class="btn o" href="{{ route('pages.accommodation') }}">Explore accommodation</a>
                 </div>
             </div>
@@ -19,7 +19,7 @@
         <section class="stay-section">
             <div class="wrap">
                 <div class="stay-heading">
-                    <p class="stay-eyebrow">UGX · per room per night</p>
+                    <p class="stay-eyebrow">UGX · per guest per night</p>
                     <h2>Choose your rate</h2>
                     <p>{{ config('ihunde.accommodation.rate_note') }}</p>
                 </div>
@@ -62,7 +62,7 @@
                 <p class="stay-eyebrow">Availability</p>
                 <h2>Get current details from the lodge</h2>
                 <p>Rates and room availability can change. Send your dates and preferred room type to confirm the latest options.</p>
-                <a class="btn" href="{{ config('ihunde.contact.whatsapp_href') }}" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+                <a class="btn" href="{{ route('booking') }}">Start a booking enquiry</a>
                 <a class="stay-cta-phone" href="{{ config('ihunde.contact.phone_href') }}">Call {{ config('ihunde.contact.phone') }}</a>
             </div>
         </section>

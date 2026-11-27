@@ -13,7 +13,7 @@
             </a>
             <x-hotel.desktop-navigation />
             <div class="rt">
-                <x-hotel.button :href="route('pages.rates-and-availability')">Book now</x-hotel.button>
+                <x-hotel.button :href="route('booking')">Book now</x-hotel.button>
                 <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav" data-m="open">
                     <x-hotel.icon name="menu" />
                 </button>

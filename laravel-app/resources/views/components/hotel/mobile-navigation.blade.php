@@ -12,5 +12,5 @@
             </div>
         @endif
     @endforeach
-    <x-hotel.button :href="route('pages.rates-and-availability')">Book now</x-hotel.button>
+    <x-hotel.button :href="route('booking')">Book now</x-hotel.button>
 </nav>

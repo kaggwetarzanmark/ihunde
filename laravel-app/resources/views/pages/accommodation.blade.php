@@ -67,13 +67,13 @@
                 <div>
                     <p class="stay-eyebrow">Rates</p>
                     <h2>Simple nightly room rates</h2>
-                    <p>Single and double rooms are available at UGX 200,000. Half-board and full-board options are also available.</p>
+                    <p>Single and double rooms are listed at UGX 200,000 per guest per night. Half-board and full-board rates are also available.</p>
                     <a class="stay-link" href="{{ route('pages.rates-and-availability') }}">See all rates and meal-plan notes</a>
                 </div>
                 <div class="stay-rate-callout">
                     <span>From</span>
                     <strong>UGX 200,000</strong>
-                    <small>per room per night</small>
+                    <small>per guest per night</small>
                 </div>
             </div>
         </section>

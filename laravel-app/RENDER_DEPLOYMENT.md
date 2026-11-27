@@ -63,7 +63,7 @@ Free web services can spin down when idle, so the first visit after inactivity m
 
 ## Database and current feature scope
 
-The current public pages and booking/newsletter forms do not read or write a database. The forms explicitly say that booking availability and newsletter subscriptions are not connected, and they do not claim to have saved anything. Laravel's standard user, cache, and queue migrations are present, but no Filament dependency, Filament routes, or application database-backed admin features were found in this repository. No database is required to serve the current site.
+The current public pages and form endpoints do not read or write a database. The booking enquiry form calculates an estimate in the browser and opens a prefilled WhatsApp message; it does not check live availability, store enquiry details, or confirm a reservation. No newsletter signup is displayed, and the unused newsletter endpoint does not create a subscription. Laravel's standard user, cache, and queue migrations are present, but no Filament dependency, Filament routes, or application database-backed admin features were found in this repository. No database is required to serve the current site.
 
 The image includes `pdo_mysql` for a later MySQL connection. The app's existing MySQL configuration remains in place; SQLite is not configured as a hosted persistence solution. When a reachable MySQL database is available:
 

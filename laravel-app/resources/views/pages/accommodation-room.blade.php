@@ -21,7 +21,7 @@
                 <div>
                     <p class="stay-eyebrow">Room rate</p>
                     <h2>{{ $room['rate'] }}</h2>
-                    <p>Per room per night. This is the rate shared by the lodge for both single and double rooms.</p>
+                    <p>Per guest per night. A maximum of two guests is allowed in each room. Confirm the room set-up and total price directly with the lodge.</p>
                     <a class="stay-link" href="{{ route('pages.rates-and-availability') }}">Compare meal plans</a>
                 </div>
                 <div class="stay-detail-panel">

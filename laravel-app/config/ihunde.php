@@ -3,6 +3,9 @@
 $roomRate = 'UGX 200,000';
 $halfBoardRate = 'UGX 250,000';
 $fullBoardRate = 'UGX 300,000';
+$roomRateAmount = 200000;
+$halfBoardRateAmount = 250000;
+$fullBoardRateAmount = 300000;
 
 return [
     'contact' => [
@@ -17,8 +20,6 @@ return [
     ],
 
     'socials' => [
-        ['label' => 'Facebook', 'icon' => 'fb', 'href' => '#'],
-        ['label' => 'Instagram', 'icon' => 'ig', 'href' => '#'],
         ['label' => 'WhatsApp', 'icon' => 'wa', 'href' => 'https://wa.me/256790000030'],
     ],
 
@@ -44,12 +45,12 @@ return [
     ],
 
     'amenities' => [
-        ['label' => 'Free WiFi', 'icon' => 'wifi'],
-        ['label' => 'Safe parking', 'icon' => 'car'],
-        ['label' => 'Room service', 'icon' => 'bell'],
+        ['label' => 'Single and double rooms', 'icon' => 'bed'],
+        ['label' => 'Restaurant and bar', 'icon' => 'fork'],
         ['label' => 'Sauna and steam', 'icon' => 'spa'],
-        ['label' => 'Airport shuttle', 'icon' => 'bus'],
-        ['label' => 'Daily breakfast', 'icon' => 'cup'],
+        ['label' => 'Conference room', 'icon' => 'users'],
+        ['label' => 'Party gardens', 'icon' => 'tree'],
+        ['label' => 'Camp fire evenings', 'icon' => 'fire'],
     ],
 
     'rooms' => [
@@ -102,7 +103,7 @@ return [
             ],
         ],
         'listing_note' => 'Facility details come from public booking listings and can change. Please confirm current amenities and breakfast inclusion with the lodge.',
-        'rate_note' => 'Rates shared by the lodge are in UGX per room per night. Meal-plan inclusions and availability should be confirmed directly before booking.',
+        'rate_note' => 'Rates were shared by the lodge on 25 November 2026 and are in UGX per guest per night. Confirm current rates, meal-plan inclusions and availability directly before booking.',
     ],
 
     'offers' => [
@@ -110,7 +111,9 @@ return [
             'name' => 'Single or Double Room',
             'description' => 'The lodge has confirmed the same nightly rate for single and double rooms.',
             'price' => $roomRate,
-            'price_note' => 'per room per night',
+            'price_note' => 'per guest per night',
+            'price_value' => $roomRateAmount,
+            'id' => 'room',
             'image' => 'b1',
             'alt' => 'Single room',
             'link_label' => 'Check availability',
@@ -120,7 +123,9 @@ return [
             'name' => 'Half Board',
             'description' => 'A half-board rate is available. Ask the lodge which meals and menu options are included.',
             'price' => $halfBoardRate,
-            'price_note' => 'per room per night',
+            'price_note' => 'per guest per night',
+            'price_value' => $halfBoardRateAmount,
+            'id' => 'half-board',
             'image' => 'b2',
             'alt' => 'Double room',
             'link_label' => 'Check availability',
@@ -130,7 +135,9 @@ return [
             'name' => 'Full Board',
             'description' => 'A full-board rate is available. Ask the lodge which meals and menu options are included.',
             'price' => $fullBoardRate,
-            'price_note' => 'per room per night',
+            'price_note' => 'per guest per night',
+            'price_value' => $fullBoardRateAmount,
+            'id' => 'full-board',
             'image' => 'cot',
             'alt' => 'Lodge gardens and cottages',
             'link_label' => 'Check availability',
@@ -141,50 +148,50 @@ return [
     'facilities' => [
         [
             'name' => 'Restaurant and bar',
-            'description' => 'Continental, buffet, à la carte, vegetarian and vegan dishes.',
+            'description' => 'Ask the lodge for current menus, prices and dietary options.',
             'icon' => 'fork',
         ],
         [
             'name' => 'Sauna and steam',
-            'description' => 'A wellness centre to soften the day.',
+            'description' => 'Confirm availability, session times and access directly with the lodge.',
             'icon' => 'spa',
         ],
         [
             'name' => 'Lobby lounge',
-            'description' => 'A welcoming space to arrive, meet and wait for your shuttle.',
+            'description' => 'Contact the lodge to confirm current lounge access and arrangements.',
             'icon' => 'sofa',
         ],
         [
             'name' => 'Conference room',
-            'description' => 'For workshops, trainings and private retreats.',
+            'description' => 'Ask about room set-up, equipment, capacity and current venue rates.',
             'icon' => 'users',
         ],
         [
             'name' => 'Party gardens',
-            'description' => 'Open lawns for weddings and celebrations.',
+            'description' => 'Enquire about date availability, guest capacity and event arrangements.',
             'icon' => 'tree',
         ],
         [
-            'name' => 'Safe parking',
-            'description' => 'Free, secure on-site parking for every guest.',
-            'icon' => 'car',
+            'name' => 'Camp fire evenings',
+            'description' => 'Ask whether a camp fire can be arranged during your visit.',
+            'icon' => 'fire',
         ],
     ],
 
     'events' => [
         [
             'name' => 'Weddings and parties',
-            'description' => 'Garden space with catering on site.',
+            'description' => 'Ask about garden availability, catering options and event pricing.',
             'icon' => 'tree',
         ],
         [
             'name' => 'Conferences',
-            'description' => 'A private room with cottages close by.',
+            'description' => 'Enquire about conference room set-up and accommodation for attendees.',
             'icon' => 'users',
         ],
         [
             'name' => 'Camp fire evenings',
-            'description' => 'Gather by the fire after dinner.',
+            'description' => 'Contact the lodge to check availability, arrangements and any additional cost.',
             'icon' => 'fire',
         ],
     ],
@@ -206,24 +213,24 @@ return [
 
     'faqs' => [
         [
-            'question' => 'What time are check-in and check-out?',
-            'answer' => 'Check-in is from 2:00 PM and check-out is by 11:00 AM. Early arrival or late departure can be arranged on request.',
+            'question' => 'What room types and rates are listed?',
+            'answer' => 'Single and double rooms are listed at UGX 200,000 per guest per night. Each room can accommodate a maximum of two guests; confirm room set-up and availability directly with the lodge.',
         ],
         [
-            'question' => 'Is there an airport shuttle?',
-            'answer' => 'Yes. Shuttle transfers are available on request. Share your flight details when you book.',
+            'question' => 'What do half board and full board cost?',
+            'answer' => 'The listed rates are UGX 250,000 for half board and UGX 300,000 for full board per guest per night. Ask which meals are included before choosing a plan.',
         ],
         [
-            'question' => 'Is parking available?',
-            'answer' => 'Free, secure parking is available on site for all guests.',
+            'question' => 'Can I book a room on this website?',
+            'answer' => 'The enquiry form estimates the stay in your browser and opens a prefilled WhatsApp message. It does not check live availability or confirm a reservation; the lodge must confirm your dates directly.',
         ],
         [
-            'question' => 'Do you host weddings and conferences?',
-            'answer' => 'Yes. We have party gardens and a conference room. Contact us for a quote.',
+            'question' => 'What is included in each meal plan?',
+            'answer' => 'The exact meals included are not specified here. Contact the lodge to confirm inclusions, serving times and any dietary options.',
         ],
         [
-            'question' => 'Are children welcome?',
-            'answer' => 'Please contact the lodge to confirm room suitability for children.',
+            'question' => 'Where is Ihunde Farm Lodge?',
+            'answer' => 'The lodge is located in Nyakasharara, Kiruhura, Uganda. Contact the lodge for route guidance before travelling.',
         ],
     ],
 
@@ -237,23 +244,30 @@ return [
             ['label' => 'Gallery', 'href' => '/gallery'],
         ],
         'pages' => [
-            ['label' => 'Single Room', 'href' => '/single-room'],
-            ['label' => 'Double Room', 'href' => '/double-room'],
-            ['label' => 'Rates and Availability', 'href' => '/rates-and-availability'],
+            ['label' => 'Dining', 'href' => '/dining'],
             ['label' => 'Restaurant', 'href' => '/restaurant'],
             ['label' => 'Bar and Lounge', 'href' => '/bar-and-lounge'],
             ['label' => 'Room Service', 'href' => '/room-service'],
             ['label' => 'Menus', 'href' => '/menus'],
+            ['label' => 'Single Room', 'href' => '/single-room'],
+            ['label' => 'Double Room', 'href' => '/double-room'],
+            ['label' => 'Rates and Availability', 'href' => '/rates-and-availability'],
+            ['label' => 'Wellness', 'href' => '/wellness'],
+            ['label' => 'Events', 'href' => '/events'],
             ['label' => 'Weddings', 'href' => '/weddings'],
             ['label' => 'Conferences and Retreats', 'href' => '/conferences-and-retreats'],
             ['label' => 'Party Gardens', 'href' => '/party-gardens'],
             ['label' => 'Camp Fire Evenings', 'href' => '/camp-fire-evenings'],
+            ['label' => 'Offers', 'href' => '/offers'],
+            ['label' => 'About', 'href' => '/about'],
+            ['label' => 'Gallery', 'href' => '/gallery'],
+            ['label' => 'Contact', 'href' => '/contact'],
         ],
         'legal' => [
-            ['label' => 'Privacy Policy', 'href' => '#'],
-            ['label' => 'Terms', 'href' => '#'],
+            ['label' => 'Privacy', 'href' => '/privacy'],
+            ['label' => 'Terms', 'href' => '/terms'],
             ['label' => 'Cookies', 'href' => '/cookies'],
-            ['label' => 'Sitemap', 'href' => '#'],
+            ['label' => 'Sitemap', 'href' => '/sitemap'],
         ],
     ],
 
